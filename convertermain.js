@@ -10,7 +10,7 @@ var categories = [
    {'name': 'Angle',            'units': []},
    {'name': 'Force',            'units': []},
    {'name': 'Pressure',         'units': []},
-   {'name': 'Fuel Consumption', 'units': []},
+   {'name': 'Fuel Consumption', 'units': ['Miles per gallon(US)', 'Miles per gallon(UK)', 'Meters per liter', 'Kilometers per liter', 'Liters per Meter', 'Liters per 100km']},
    {'name': 'Digital Storage',  'units': ['Bit', 'Byte', 'Kilobit', 'Kilobyte', 'Megabit', 'Megabyte', 'Gigabit', 'Gigabyte', 'Terabit', 'Terabyte', 'Petabit', 'Petabyte']},
    {'name': 'Energy',           'units': []},
    {'name': 'Flow',             'units': ['Cubic meter per second', 'Cubic meter per minute', 'Cubic meter per hour', 'Liter per second', 'Liter per minute', 'Liter per hour', 'US gallon per second', 'US gallon per minute', 'US gallon per hour', 'US gallon per day', 'UK gallon per second', 'UK gallon per minute', 'UK gallon per hour', 'UK gallon per day', 'Acre-foor per hour', 'Acre-foor per day', 'Acre-foor per year', 'Cubic foot per second', 'Cubic foot per minute', 'Cubic foot per hour', 'Cubic inch per second', 'Cubic inch per minute', 'Cubic inch per hour' ]},
