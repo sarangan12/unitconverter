@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Unit Conveter Chrome Extension</title>
+    <style>
+    	body {
+    	  min-width: 300px;
+    	  max-width: 300px;
+    	}
+
+    	h2 {
+    		text-align: center;
+    	}
+
+    	select {
+    		margin: 5px;
+    	}
+
+    	.category {
+    		 border-style: solid;
+    		 border-color: #657383;
+    		 background-color: #657383;
+    		 margin: 5px;
+    		 padding: 5px;
+    		 color: white;
+    		 font-weight: bold;
+    		 min-width: 120px;
+    		 max-width: 120px;
+    		 float: left;
+             box-shadow: 5px 5px 5px #657383;
+    	}
+
+        #footer {
+            clear:both;            
+            padding-top: 10px;
+            text-align: right;
+        }
+
+    	a {
+    		text-decoration: none;
+    		color: white;
+    	}
+
+        #backButton, #feedbackButton {
+            text-decoration: none;
+            color: blue;
+        }
+
+    	#conversion {
+    	  display:none;
+    	}
+
+    	#fromid, #toid, #fromValue, #toValue {
+    	  margin:10px;
+    	}
+
+        #toValue {
+            min-height: 15px;
+        }
+
+    	table {
+    	  margin-left: 25px;
+    	}
+    </style>
+    <script src="angular.min.js"></script>
+    <script src="convertermain.js"></script>
+  </head>
+  <body ng-app="converter_mainapp" ng-controller="myCtrl">
+    <h2>Unit Converter</h2>
+
+    <div id="categories">
+    	<div ng-repeat="x in categories" class="category">
+    		<a href="#" ng-click="categoryClick(x.name)">
+    			{{x.name}}
+    		</a>
+    	</div>
+    </div>
+
+    <div id="conversion">
+      <h2>{{subcategory}} Conversion</h2>
+      <a href="#" id="backButton" ng-click="goBack()">&#60;&#60;Back</a>
+
+	    <table>
+            <tr>
+                <td><b>Convert</b></td>
+                <td>
+                    <input type="number" name="fromValue" id="fromValue" ng-model="fromValue" ng-change="fromValueChanged()"></input><br>
+                    
+                </td>
+            </tr>
+	       <tr>
+	           <td><b>From</b></td>
+                <td>
+                    <select id="fromid">
+                        <option ng-repeat="x in subcategories" value="{{x}}">{{x}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>To</b></td>
+                <td>
+                    <select id="toid">
+                        <option ng-repeat="x in subcategories" value="{{x}}">{{x}}</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td><b>Result</b></td>
+                <td><div id="toValue">{{toValue}}</div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="footer">
+        <a href="mailto:sarangan.rajamanickam@gmail.com?subject=Feedback" target="_blank" id="feedbackButton">Provide Feedback</a>
+    </div>
+  </body>
+</html>
+

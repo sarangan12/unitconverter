@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Unit Converter",
+	"description": "Extension to convert units.",
+	"version": "1.0",
+	
+	"browser_action":{
+		"default_icon": "icon.png",
+		"default_popup": "converter.html",
+		"default_title": "Unit Converter"
+	}
+}
