@@ -6,7 +6,7 @@ var categories = [
    {'name': 'Length',           'units': ['Kilometer', 'Meter', 'Centimeter', 'Millimeter', 'Mile', 'Yard', 'Foot', 'Inch', 'Fathom']},
    {'name': 'Speed',            'units': ['Miles per hour', 'Feet per second', 'Meters per second', 'Kilometers per hour', 'Knots']},
    {'name': 'Area',             'units': []},
-   {'name': 'Time',             'units': []},
+   {'name': 'Time',             'units': ['Nanosecond', 'Microsecond', 'Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year', 'Decade', 'Century']},
    {'name': 'Angle',            'units': ['Degree', 'Radian']},
    {'name': 'Force',            'units': []},
    {'name': 'Pressure',         'units': []},
