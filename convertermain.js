@@ -7,7 +7,7 @@ var categories = [
    {'name': 'Speed',            'units': ['Miles per hour', 'Feet per second', 'Meters per second', 'Kilometers per hour', 'Knots']},
    {'name': 'Area',             'units': []},
    {'name': 'Time',             'units': []},
-   {'name': 'Angle',            'units': []},
+   {'name': 'Angle',            'units': ['Degree', 'Radian']},
    {'name': 'Force',            'units': []},
    {'name': 'Pressure',         'units': []},
    {'name': 'Fuel Consumption', 'units': ['Miles per gallon(US)', 'Miles per gallon(UK)', 'Meters per liter', 'Kilometers per liter', 'Liters per Meter', 'Liters per 100km']},
