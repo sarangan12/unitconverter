@@ -25,6 +25,7 @@ app.controller('myCtrl', function($scope) {
     $scope.fromValue = "";
     $scope.toValue = "";
 
+
     $scope.goBack = function() {
       document.getElementById("categories").style.display = "block";
       document.getElementById("conversion").style.display = "none";
@@ -32,6 +33,8 @@ app.controller('myCtrl', function($scope) {
       $scope.subcategories = [];
       $scope.fromValue = "";
       $scope.toValue = "";
+      $scope.fromId = "";
+      $scope.toId = "";
     }
 
     $scope.categoryClick = function(category) {
@@ -40,14 +43,79 @@ app.controller('myCtrl', function($scope) {
 		  angular.forEach($scope.categories, function(catg) {
 		    if(catg.name === category) {
 		      $scope.subcategories = catg.units;
+          $scope.fromId = $scope.subcategories[0];
+          $scope.toId = $scope.subcategories[0];
 		    }
 		  });
+
       document.getElementById("categories").style.display = "none";
       document.getElementById("conversion").style.display = "block";
 	  };
 
     $scope.fromValueChanged = function(){
-      $scope.toValue = $scope.fromValue;
+      if($scope.subcategory === "Temperature") {
+        var temperatureEngine = new TemperatureEngine(parseFloat($scope.fromValue), $scope.fromId, $scope.toId);
+        $scope.toValue = temperatureEngine.Convert();
+      }      
     }
-
 });
+
+function TemperatureEngine(fromValue, fromId, toId){
+  this.toId = toId;
+  this.fromId = fromId;
+  this.fromValue = fromValue;
+}
+
+TemperatureEngine.prototype.FarenheitToCelsius = function(fv) {
+  return (((fv - 32) * 5)/9);
+}
+
+TemperatureEngine.prototype.KelvinToCelsius = function(fv) {
+  return (fv - 273.15);
+}
+
+TemperatureEngine.prototype.CelsiusToCelsius = function(fv) {
+  return fv;
+}
+
+TemperatureEngine.prototype.CelsiusToFarenheit = function(fv) {
+  return ((fv * (9/5)) + 32);
+}
+
+TemperatureEngine.prototype.CelsiusToKelvin = function(fv) {
+  returb (fv + 273.15);
+}
+
+TemperatureEngine.prototype.Convert = function() {
+  var intermediateCelsiusValue;
+  switch (this.fromId) {
+    case "Farenheit":
+      intermediateCelsiusValue = this.FarenheitToCelsius(this.fromValue);
+      break;
+    case "Celsius":
+      intermediateCelsiusValue = this.CelsiusToCelsius(this.fromValue);
+      break;
+    case "Kelvin":
+      intermediateCelsiusValue = this.KelvinToCelsius(this.fromValue);
+      break;
+  }
+
+  var finalValue;
+  switch(this.toId){
+    case "Farenheit":
+      finalValue = this.CelsiusToFarenheit(intermediateCelsiusValue);
+      break;
+    case "Celsius":
+      finalValue = this.CelsiusToCelsius(intermediateCelsiusValue);
+      break;
+    case "Kelvin":
+      finalValue = this.CelsiusToKelvin(intermediateCelsiusValue);
+      break;
+  }
+
+  return finalValue;
+}
+
+
+
+
