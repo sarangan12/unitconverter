@@ -52,6 +52,12 @@ app.controller('myCtrl', function($scope) {
       document.getElementById("conversion").style.display = "block";
 	  };
 
+	$scope.selectionChanged = function(){
+	  if(typeof($scope.fromValue) === "number") {
+	    $scope.fromValueChanged();
+      }
+	};
+
     $scope.fromValueChanged = function(){
       if($scope.subcategory === "Temperature") {
         var temperatureEngine = new TemperatureEngine(parseFloat($scope.fromValue), $scope.fromId, $scope.toId);
@@ -70,5 +76,5 @@ app.controller('myCtrl', function($scope) {
 	    $scope.toValue = angleEngine.Convert();
 	    return;
 	  }
-    }
+    };
 });

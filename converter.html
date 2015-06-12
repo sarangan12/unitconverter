@@ -94,7 +94,7 @@
 	       <tr>
 	           <td><b>From</b></td>
                 <td>
-                    <select id="fromid" ng-model="fromId">
+                    <select id="fromid" ng-model="fromId" ng-change="selectionChanged()">
                         <option ng-repeat="x in subcategories" value="{{x}}">{{x}}</option>
                     </select>
                 </td>
@@ -102,7 +102,7 @@
             <tr>
                 <td><b>To</b></td>
                 <td>
-                    <select id="toid" ng-model="toId">
+                    <select id="toid" ng-model="toId" ng-change="selectionChanged()">
                         <option ng-repeat="x in subcategories" value="{{x}}">{{x}}</option>
                     </select>
                 </td>
