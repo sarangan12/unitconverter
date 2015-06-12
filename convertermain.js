@@ -60,6 +60,13 @@ app.controller('myCtrl', function($scope) {
     }
 });
 
+function DigitalStorageEngine(fromValue, fromId, toId){
+  this.toId = toId;
+  this.fromId = fromId;
+  this.fromValue = fromValue;
+}
+
+
 function TemperatureEngine(fromValue, fromId, toId){
   this.toId = toId;
   this.fromId = fromId;
