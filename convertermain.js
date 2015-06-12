@@ -9,7 +9,7 @@ var categories = [
    {'name': 'Time',             'units': ['Nanosecond', 'Microsecond', 'Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year', 'Decade', 'Century']},
    {'name': 'Angle',            'units': ['Degree', 'Radian']},
    {'name': 'Force',            'units': ['Dyne', 'Newton', 'Gram force', 'Kilopond', 'Kip force', 'Pound force', 'Poundal']},
-   {'name': 'Pressure',         'units': []},
+   {'name': 'Pressure',         'units': ['Atmosphere standard', 'Atmosphere technical', 'Millibar', 'Bar', 'Pascal', 'Megapascal', 'Kilopascal', 'Hectopascal', 'Ksi', 'Psi', 'Torr', 'Kilogram/square centimeter', 'Kilogram/square meter', 'Newton/square centimeter', 'Newton/square meter' ]},
    {'name': 'Fuel Consumption', 'units': ['Miles per gallon(US)', 'Miles per gallon(UK)', 'Meters per liter', 'Kilometers per liter', 'Liters per Meter', 'Liters per 100km']},
    {'name': 'Digital Storage',  'units': ['Bit', 'Byte', 'Kilobit', 'Kilobyte', 'Megabit', 'Megabyte', 'Gigabit', 'Gigabyte', 'Terabit', 'Terabyte', 'Petabit', 'Petabyte']},
    {'name': 'Energy',           'units': []},
