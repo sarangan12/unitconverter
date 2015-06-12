@@ -11,7 +11,7 @@ var categories = [
    {'name': 'Force',            'units': []},
    {'name': 'Pressure',         'units': []},
    {'name': 'Fuel Consumption', 'units': []},
-   {'name': 'Digital Storage',  'units': []},
+   {'name': 'Digital Storage',  'units': ['Bit', 'Byte', 'Kilobit', 'Kilobyte', 'Megabit', 'Megabyte', 'Gigabit', 'Gigabyte', 'Terabit', 'Terabyte', 'Petabit', 'Petabyte']},
    {'name': 'Energy',           'units': []},
    {'name': 'Flow',             'units': ['Cubic meter per second', 'Cubic meter per minute', 'Cubic meter per hour', 'Liter per second', 'Liter per minute', 'Liter per hour', 'US gallon per second', 'US gallon per minute', 'US gallon per hour', 'US gallon per day', 'UK gallon per second', 'UK gallon per minute', 'UK gallon per hour', 'UK gallon per day', 'Acre-foor per hour', 'Acre-foor per day', 'Acre-foor per year', 'Cubic foot per second', 'Cubic foot per minute', 'Cubic foot per hour', 'Cubic inch per second', 'Cubic inch per minute', 'Cubic inch per hour' ]},
    {'name': 'Power',            'units': ['BTU per hour', 'BTU per minute', 'BTU per second', 'Calories per hour', 'Calories per minute', 'Calories per second', 'Erg per second', 'Foot pound per hour', 'Foot pound per minute', 'Foot pound per second', 'Gigawatt', 'Horsepower', 'Kilocalorie per hour', 'Kilocalorie per minute', 'Kilocalorie per second', 'Kilowatt', 'Megawatt', 'Milliwatt', 'Watt']},
