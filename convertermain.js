@@ -5,7 +5,7 @@ var categories = [
    {'name': 'Volume',           'units': ['Liter', 'Milliliter', 'Cubic Meter', 'Cubic foot', 'Cubic Inch', 'Cup(Metric)', 'Cup(US)', 'Gallons(US)', 'Quarts(US)', 'Pint(US)', 'Fluid Ounce(UK)', 'Tablespoon(UK)', 'Teaspoon(UK)']},
    {'name': 'Length',           'units': ['Kilometer', 'Meter', 'Centimeter', 'Millimeter', 'Mile', 'Yard', 'Foot', 'Inch', 'Fathom']},
    {'name': 'Speed',            'units': ['Miles per hour', 'Feet per second', 'Meters per second', 'Kilometers per hour', 'Knots']},
-   {'name': 'Area',             'units': []},
+   {'name': 'Area',             'units': ['Square kilometer', 'Square mile', 'Square meter', 'Square centimeter', 'Square millimeter', 'Hectare', 'Acre', 'Square yard', 'Square foot', 'Square inch']},
    {'name': 'Time',             'units': ['Nanosecond', 'Microsecond', 'Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year', 'Decade', 'Century']},
    {'name': 'Angle',            'units': ['Degree', 'Radian']},
    {'name': 'Force',            'units': []},
